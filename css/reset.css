@@ -1,0 +1,143 @@
+/* 
+on utilise le reset de eric meyer
+http://meyerweb.com/eric/tools/css/reset/ 
+*/
+
+/* et on ajoute juste le box-sizing: border-box sur tous les elements comme dans le reset de john comeau car c'est bien pratique (quand on definira une taille de bloc ce sera padding et border comprises */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* c'est bien d'ajouter que toutes images ont en taille MAX la taille de leur balmise parente comme ça on evite les images qui depasssent de la page  */
+img {
+	/* meme si l'image aura une taille fixe de 300px , elle va rapetissir si l'ecran fait moins de 300px pour pas que ça depasse */
+	max-width: 100%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ici le reset ecrase le style des listes donc on a plus les puces */
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
