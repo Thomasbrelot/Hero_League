@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+  --primary-color: var(#a29bfe);
+  --avis-color: var(#938ce6);
+  --border-color: var(#555186);
+}
+
 .inter {
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
@@ -8,4 +14,39 @@
 }
 body {
   font-family: 'inter', Arial, Helvetica, sans-serif;
+}
+
+/* Modification du header */
+h1.header__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem auto;
+}
+nav.header__nav {
+  display: none;
+}
+
+/* Modification de la premiere section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../ressources/images/hero-banner.png') center/cover no-repeat;
+  height: 70vh;
+  border-radius: 15px;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2.hero__title {
+  font-size: 2.8rem;
+  margin: 2rem auto;
+  font-weight: bold;
+}
+span.hero__subtitle {
+  text-align: center;
+  margin: 0 2rem;
+  line-height: 1.6rem;
+  font-weight: bold;
 }
