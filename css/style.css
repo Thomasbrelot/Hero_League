@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --primary-color: var(#a29bfe);
-  --avis-color: var(#938ce6);
-  --border-color: var(#555186);
+  --primary-color: #a29bfe;
+  --avis-color: #938ce6;
+  --border-color: #555186;
 }
 
 .inter {
@@ -13,25 +13,57 @@
   font-style: normal;
 }
 body {
-  font-family: 'inter', Arial, Helvetica, sans-serif;
+  font-family: 'inter', arial, helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
 }
-
-/* Modification du header */
 h1.header__title {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin: 3rem auto;
 }
+h2.hero__title {
+  font-size: 2.8rem;
+  margin: 2rem auto;
+  font-weight: bold;
+}
+h3.services__title,
+h3.heroes__title,
+h3.testimonials__title {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+h4.service-card__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1.6rem;
+  color: var(--primary-color);
+}
+h5.hero-card__name,
+h5.testimonial-card__name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0rem;
+}
+h6/*{
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}*/
+
+/* Modification du header */
 nav.header__nav {
   display: none;
 }
-
 /* Modification de la premiere section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('../ressources/images/hero-banner.png') center/cover no-repeat;
-  height: 70vh;
+  height: 80vh;
   border-radius: 15px;
   margin: 0 1rem;
   display: flex;
@@ -39,14 +71,177 @@ nav.header__nav {
   justify-content: center;
   align-items: center;
 }
-h2.hero__title {
-  font-size: 2.8rem;
-  margin: 2rem auto;
-  font-weight: bold;
-}
 span.hero__subtitle {
   text-align: center;
   margin: 0 2rem;
   line-height: 1.6rem;
   font-weight: bold;
+}
+/* Modification de la section services */
+.color {
+  color: var(--primary-color);
+}
+section.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+article.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px var(--border-color);
+  width: 100%;
+  height: 50vh;
+  gap: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+span.service-card__description {
+  margin: 0rem 3rem;
+}
+button.service-card__button {
+  color: #fff;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+p.service-card__note {
+  font-style: italic;
+  margin-top: auto;
+  margin-bottom: 1.3rem;
+  padding: 0 1rem;
+}
+
+/* Modificationde la section super heros */
+section.heroes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 1rem;
+}
+.hero-card-1 {
+  background-image: url(../ressources/images/catastrophic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+.hero-card-2 {
+  background-image: url(../ressources/images/carotte-woman.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+.hero-card-3 {
+  background-image: url(../ressources/images/ultraquenarde.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+.hero-card-4 {
+  background-image: url(../ressources/images/poulpy.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+.hero-card-5 {
+  background-image: url(../ressources/images/oran-wu-tang-clan.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+.hero-card-6 {
+  background-image: url(../ressources/images/superime.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+.text-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+button.heroes__button {
+  color: #fff;
+  background: var(--primary-color);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Modification de la section temoignage*/
+section.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1rem;
+}
+article.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: var(--avis-color);
+  border-radius: 20px;
+  height: 65vh;
+}
+img.testimonial-card__image {
+  max-width: 100%;
+  height: 50%; /* Assure que l’image occupe une moitié de la carte */
+  object-fit: cover;
+  border: solid 6px var(--primary-color);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.text-avis-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le texte verticalement */
+  flex-grow: 1; /* Fait en sorte que cette partie occupe tout l'espace restant */
+  padding: 1rem;
+  margin-top: auto;
 }
