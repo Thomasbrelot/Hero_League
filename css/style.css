@@ -30,7 +30,8 @@ h2.hero__title {
 }
 h3.services__title,
 h3.heroes__title,
-h3.testimonials__title {
+h3.testimonials__title,
+h3.contact__title {
   margin-top: 4rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -44,16 +45,12 @@ h4.service-card__title {
   color: var(--primary-color);
 }
 h5.hero-card__name,
-h5.testimonial-card__name {
+h5.testimonial-card__name,
+h6.footer__title {
   font-size: 1.4rem;
   font-weight: bold;
   margin: 1rem 0rem;
 }
-h6/*{
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}*/
 
 /* Modification du header */
 nav.header__nav {
@@ -198,7 +195,8 @@ section.heroes {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 1rem;
 }
-button.heroes__button {
+button.heroes__button,
+button.contact__button {
   color: #fff;
   background: var(--primary-color);
   text-transform: uppercase;
@@ -244,4 +242,70 @@ img.testimonial-card__image {
   flex-grow: 1; /* Fait en sorte que cette partie occupe tout l'espace restant */
   padding: 1rem;
   margin-top: auto;
+}
+
+/* Modification de la section avec le formulaire */
+form.contact__form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem 1rem;
+}
+input#name,
+input#email,
+select#service {
+  background: grey;
+  border: none;
+  border-radius: 10px;
+  height: 3rem;
+  transition: outline 0.1s ease-in-out;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--avis-color); /* Bordure violette */
+  border-radius: 10px; /* Arrondi les bords */
+}
+textarea#message {
+  background: grey;
+  border: none;
+  border-radius: 10px;
+}
+select#service {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-left: 0.4rem;
+}
+.contact__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Modification du footer */
+footer.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: var(--primary-color);
+  padding: 2rem 0rem;
+  border-radius: 40% 85% 0% 0% / 10% 20% 80% 90%;
+}
+ul.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li.footer__nav-item {
+  margin-bottom: 1.2rem;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }

@@ -184,22 +184,23 @@
         <h3 class="contact__title">Sauvez-moi !</h3>
 
         <form class="contact__form" action="submit.php" method="POST">
-            <label class="contact__label" for="name">Nom :</label>
+            <label class="contact__label" for="name">Nom </label>
             <input class="contact__input" type="text" id="name" name="name" required>
 
-            <label class="contact__label" for="email">Email :</label>
+            <label class="contact__label" for="email">Email </label>
             <input class="contact__input" type="email" id="email" name="email" required>
 
-            <label class="contact__label" for="service">Service :</label>
+            <label class="contact__label" for="service">Service </label>
             <select class="contact__select" id="service" name="service" required>
                 <option value="">-- Sélectionnez un service --</option>
-                <option value="web">Développement Web</option>
-                <option value="seo">Optimisation SEO</option>
-                <option value="design">Design Graphique</option>
+                <option value="Déménagement">Super Déménagement</option>
+                <option value="Livraison">Livraison de Repas</option>
+                <option value="Bouchons">Z'héro Bouchons</option>
+                <option value="Sauvetage">Sauvetage de soirée - Moral à Z'héro</option>
             </select>
 
-            <label class="contact__label" for="message">Message :</label>
-            <textarea class="contact__textarea" id="message" name="message" rows="4" required></textarea>
+            <label class="contact__label" for="message">Message </label>
+            <textarea class="contact__textarea" id="message" name="message" rows="12" required></textarea>
 
             <button class="contact__button" type="submit">Envoyer</button>
         </form>
