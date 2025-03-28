@@ -37,7 +37,7 @@ Ajout de JavaScript pour plus d’interactivité
 
 ### 🌍 Démo en Ligne
 
-🔗 [Heros League](https://ton-github.github.io/hero-league/)
+🔗 [Heros League](https://thomasbrelot.github.io/Hero_League/)
 
 ### 🎯 Objectifs du Projet
 
@@ -57,6 +57,6 @@ Ajout de JavaScript pour plus d’interactivité
 
 ### 📞 Contact
 
-💌 Retrouve-moi sur LinkedIn ou GitHub !
+💌 Retrouve-moi sur [linkedin](https://www.linkedin.com/in/thomas-brelot/).
 
 ⭐ Stp, laisse une étoile si tu aimes le projet ! 🚀
