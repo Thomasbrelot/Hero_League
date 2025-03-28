@@ -48,12 +48,15 @@ Ajout de JavaScript pour plus d’interactivité
 
 ### 🏆 Challenges & Solutions
 
-- **Problème** : Commencement du site en mobile first.  
-  <u>**Solution**</u> : decomposer la maquette fournie et reflechir a la semantique html et les balises à utilisé.
-- **Problème** : Ajuster les images en responsive sans distorsion  
-  <u>**Solution**</u> : Utilisation de `object-fit: cover;` et `max-width: 100%;` <br>
-- **Problème** : Optimisation des performances du CSS  
-  <u>**Solution**</u> : Minification des fichiers CSS et chargement asynchrone des assets
+| **Problème**                                         | **Solution**                                                                                      |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Commencement du site en Mobile-First**             | Décomposer la maquette fournie et réfléchir à la sémantique HTML ainsi qu'aux balises à utiliser. |
+| **Ajuster les images en responsive sans distorsion** | Utilisation de `object-fit: cover;` et `max-width: 100%;`.                                        |
+| **Optimisation des performances du CSS**             | Minification des fichiers CSS et chargement asynchrone des assets.                                |
+
+<div align  ="center">
+  <img src="./ressources/images/Reflexion-avant-leCode.jpeg" alt="Description de l'image" width="400">
+</div>
 
 ### 📞 Contact
 
