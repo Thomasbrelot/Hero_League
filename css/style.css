@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
   --primary-color: #a29bfe;
   --avis-color: #938ce6;
   --border-color: #555186;
+  --hoverbtn: #726db2;
+  --form-color: #4d4d4d;
+  --footer-color: #8e7bff;
 }
-
 .inter {
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
@@ -17,6 +18,8 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+/* Modification des titrres de la page html*/
 h1.header__title {
   font-size: 2rem;
   font-weight: bold;
@@ -52,6 +55,44 @@ h6.footer__title {
   margin: 1rem 0rem;
 }
 
+/* Modification de tous les bouttons de la page */
+button.service-card__button {
+  color: #fff;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+button.service-card__button:hover {
+  background-color: var(--hoverbtn);
+  transform: scale(1.05);
+}
+button.heroes__button,
+button.contact__button {
+  color: #fff;
+  background: var(--primary-color);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+button.heroes__button:hover,
+button.contact__button:hover {
+  background-color: var(--hoverbtn);
+  transform: scale(1.05);
+}
+/* Fin de la modification des buttons on page */
+
 /* Modification du header */
 nav.header__nav {
   display: none;
@@ -60,7 +101,7 @@ nav.header__nav {
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('../ressources/images/hero-banner.png') center/cover no-repeat;
-  height: 80vh;
+  height: 100vh;
   border-radius: 15px;
   margin: 0 1rem;
   display: flex;
@@ -83,10 +124,14 @@ section.services {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0 1rem;
 }
-article.service-card {
+article.service-card-1,
+article.service-card-2,
+article.service-card-3,
+article.service-card-4,
+article.service-card-5 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,27 +140,16 @@ article.service-card {
   height: 50vh;
   gap: 1rem;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
 }
-
 span.service-card__description {
   margin: 0rem 3rem;
-}
-button.service-card__button {
-  color: #fff;
-  background: var(--primary-color);
-  border: none;
-  border-radius: 20px;
-  margin-top: 1rem;
-  padding: 0.8rem 1.4rem;
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 p.service-card__note {
   font-style: italic;
   margin-top: auto;
   margin-bottom: 1.3rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 /* Modificationde la section super heros */
@@ -126,6 +160,7 @@ section.heroes {
   margin: 0 1rem;
 }
 .hero-card-1 {
+  position: relative;
   background-image: url(../ressources/images/catastrophic.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -134,9 +169,23 @@ section.heroes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.hero-card-1:hover::after {
+  content: 'Ne contrôle pas tout à fait sa patte droite, et peut être amené à vous mettre une - plus ou moins petite - tape sur la tête.';
+  position: absolute;
+  top: 0;
+  display: block;
+  color: white;
+  background: rgba(147, 140, 230, 0.7);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2rem;
 }
 .hero-card-2 {
+  position: relative;
   background-image: url(../ressources/images/carotte-woman.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -145,9 +194,24 @@ section.heroes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.hero-card-2:hover::after {
+  content: "Attention, elle essaiera souvent de vous faire payer plus que le prix convenu avec Heros League. N'acceptez pas";
+  position: absolute;
+  top: 0;
+  display: block;
+  color: white;
+  background: rgba(147, 140, 230, 0.7);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2rem;
+  width: 100%;
 }
 .hero-card-3 {
+  position: relative;
   background-image: url(../ressources/images/ultraquenarde.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,9 +220,24 @@ section.heroes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.hero-card-3:hover::after {
+  content: "Vous sort du traquenard… Mais il arrive qu'elle vous entraîne dans un autre.";
+  position: absolute;
+  top: 0;
+  display: block;
+  color: white;
+  background: rgba(147, 140, 230, 0.7);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2rem;
+  width: 100%;
 }
 .hero-card-4 {
+  position: relative;
   background-image: url(../ressources/images/poulpy.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -167,9 +246,24 @@ section.heroes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.hero-card-4:hover::after {
+  content: 'Un peu collant';
+  position: absolute;
+  top: 0;
+  display: block;
+  color: white;
+  background: rgba(147, 140, 230, 0.7);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2rem;
+  width: 100%;
 }
 .hero-card-5 {
+  position: relative;
   background-image: url(../ressources/images/oran-wu-tang-clan.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -178,9 +272,24 @@ section.heroes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.hero-card-5:hover::after {
+  content: 'Peut être amené à vous demander de financer son prochain album, ne pas accepter.';
+  position: absolute;
+  top: 0;
+  display: block;
+  color: white;
+  background: rgba(147, 140, 230, 0.7);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2rem;
+  width: 100%;
 }
 .hero-card-6 {
+  position: relative;
   background-image: url(../ressources/images/superime.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -189,25 +298,25 @@ section.heroes {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.hero-card-6:hover::after {
+  content: "N'a plus de pouvoir mais refuse de l'admettre, peut être amené à vous raconter des histoires de l'époque où il était encore super.";
+  position: absolute;
+  top: 0;
+  display: block;
+  color: white;
+  background: rgba(147, 140, 230, 0.7);
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2rem;
+  width: 100%;
 }
 .text-background {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 1rem;
-}
-button.heroes__button,
-button.contact__button {
-  color: #fff;
-  background: var(--primary-color);
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 15px;
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 /* Modification de la section temoignage*/
@@ -217,19 +326,22 @@ section.testimonials {
   gap: 2rem;
   margin: 1rem;
 }
-article.testimonial-card {
+article.testimonial-card-1,
+article.testimonial-card-2,
+article.testimonial-card-3,
+article.testimonial-card-4 {
   display: flex;
   flex-direction: column;
   text-align: center;
   background: var(--avis-color);
   border-radius: 20px;
-  height: 65vh;
+  height: 75vh;
 }
 img.testimonial-card__image {
   max-width: 100%;
-  height: 50%; /* Assure que l’image occupe une moitié de la carte */
+  height: 60%; /* Assure que l’image occupe une moitié de la carte */
   object-fit: cover;
-  border: solid 6px var(--primary-color);
+  border: solid 8px var(--primary-color);
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 20px;
@@ -240,8 +352,13 @@ img.testimonial-card__image {
   flex-direction: column;
   justify-content: center; /* Centre le texte verticalement */
   flex-grow: 1; /* Fait en sorte que cette partie occupe tout l'espace restant */
-  padding: 1rem;
+  padding: 0 1rem;
   margin-top: auto;
+}
+p.testimonial-card__quote {
+  font-weight: lighter;
+  color: #fff;
+  line-height: 1.6rem;
 }
 
 /* Modification de la section avec le formulaire */
@@ -256,9 +373,9 @@ form.contact__form {
 input#name,
 input#email,
 select#service {
-  background: grey;
+  background: var(--form-color);
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   height: 3rem;
   transition: outline 0.1s ease-in-out;
 }
@@ -269,9 +386,9 @@ textarea:focus {
   border-radius: 10px; /* Arrondi les bords */
 }
 textarea#message {
-  background: grey;
+  background: var(--form-color);
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 select#service {
   color: white;
@@ -281,7 +398,9 @@ select#service {
 }
 .contact__label {
   display: block;
+  margin-top: 0.8rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 /* Modification du footer */
@@ -291,7 +410,7 @@ footer.footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background: var(--primary-color);
+  background: var(--footer-color);
   padding: 2rem 0rem;
   border-radius: 40% 85% 0% 0% / 10% 20% 80% 90%;
 }
@@ -300,6 +419,7 @@ ul.footer__nav-list {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 li.footer__nav-item {
   margin-bottom: 1.2rem;
@@ -308,4 +428,364 @@ a {
   list-style: none;
   text-decoration: none;
   color: white;
+}
+@media screen and (min-width: 600px) {
+  /* Affichage de la navigation */
+  nav.header__nav {
+    display: block;
+  }
+  ul.header__nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    gap: 4rem;
+  }
+
+  /* Modification de la section services */
+  section.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    margin-top: 3em;
+  }
+  article.service-card-1,
+  article.service-card-2,
+  article.service-card-3,
+  article.service-card-4,
+  article.service-card-5 {
+    height: 100%;
+  }
+  h3.services__title {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .services__title:before,
+  .services__title:after {
+    content: '';
+    width: 3em;
+    border-bottom: var(--avis-color) solid;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .services__title:before {
+    margin-left: -100%;
+    margin-right: 3em;
+  }
+  .services__title:after {
+    margin-right: -100%;
+    margin-left: 3em;
+  }
+  article.service-card-1 {
+    grid-area: 2 / 1 / 5 / 2;
+  }
+  article.service-card-2 {
+    grid-area: 2 / 2 / 5 / 3;
+  }
+  article.service-card-3 {
+    grid-area: 5 / 1 / 8 / 2;
+  }
+  article.service-card-4 {
+    grid-area: 5 / 2 / 8 / 3;
+  }
+  article.service-card-5 {
+    grid-area: 8 / 1 / 11 / 3;
+  }
+
+  /* Modification section heros*/
+  section.heroes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin-top: 4em;
+  }
+  h3.heroes__title {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 2.4rem;
+  }
+  .heroes__title:before,
+  .heroes__title:after {
+    content: '';
+    width: 3em;
+    border-bottom: var(--avis-color) solid;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .heroes__title:before {
+    margin-left: -100%;
+    margin-right: 3em;
+  }
+  .heroes__title:after {
+    margin-right: -100%;
+    margin-left: 3em;
+  }
+  article.hero-card-1 {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+  article.hero-card-2 {
+    grid-area: 2 / 2 / 4 / 3;
+  }
+  article.hero-card-3 {
+    grid-area: 4 / 1 / 6 / 2;
+  }
+  article.hero-card-4 {
+    grid-area: 4 / 2 / 6 / 3;
+  }
+  article.hero-card- {
+    grid-area: 6 / 1 / 8 / 2;
+  }
+  article.hero-card-6 {
+    grid-area: 6 / 2 / 8 / 3;
+  }
+  button.heroes__button {
+    grid-area: 8 / 1 / 9 / 3;
+  }
+
+  /* Modification de la partie temoignage */
+  section.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin-top: 4em;
+  }
+  .testimonials__title {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .testimonials__title:before,
+  .testimonials__title:after {
+    content: '';
+    width: 3em;
+    border-bottom: var(--avis-color) solid;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .testimonials__title:before {
+    margin-left: -100%;
+    margin-right: 3em;
+  }
+  .testimonials__title:after {
+    margin-right: -100%;
+    margin-left: 3em;
+  }
+  article.testimonial-card-1 {
+    grid-area: 2 / 1 / 4 / 2;
+    height: 45vh;
+  }
+  article.testimonial-card-2 {
+    grid-area: 2 / 2 / 4 / 3;
+    height: 45vh;
+  }
+  article.testimonial-card-3 {
+    grid-area: 4 / 1 / 6 / 2;
+    height: 45vh;
+  }
+  article.testimonial-card-4 {
+    grid-area: 4 / 2 / 6 / 3;
+    height: 45vh;
+  }
+
+  section.contact {
+    max-width: 60%;
+    margin: 6em auto;
+  }
+  .contact__title:before,
+  .contact__title:after {
+    content: '';
+    width: 3em;
+    border-bottom: var(--avis-color) solid;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .contact__title:before {
+    margin-left: -100%;
+    margin-right: 3em;
+  }
+  .contact__title:after {
+    margin-right: -100%;
+    margin-left: 3em;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* Modification du header pour ecran desktop */
+  header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+  h1.header__title {
+    margin: 0;
+  }
+  ul.header__nav-list {
+    margin-bottom: 0;
+  }
+  .header__nav-link--services,
+  .header__nav-link--heroes,
+  .header__nav-link--testimonials,
+  .header__nav-link--cta {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  /* Effet de soulignement animé */
+  .header__nav-link--services::after,
+  .header__nav-link--heroes::after,
+  .header__nav-link--testimonials::after,
+  .header__nav-link--cta::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+  }
+  /* Changement de couleur au survol */
+  .header__nav-link--services:hover,
+  .header__nav-link--heroes:hover,
+  .header__nav-link--testimonials:hover,
+  .header__nav-link--cta:hover {
+    color: var(--primary-color);
+  }
+  /* Animation du soulignement */
+  .header__nav-link--services:hover::after,
+  .header__nav-link--heroes:hover::after,
+  .header__nav-link--testimonials:hover::after,
+  .header__nav-link--cta:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Modification de la section services*/
+  section.services {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    margin-top: 3em;
+    margin: 0 6rem;
+  }
+  h3.services__title {
+    grid-area: 1 / 1 / 2 / 7;
+    font-size: 2.4rem;
+  }
+  article.service-card-1 {
+    grid-area: 2 / 1 / 6 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article.service-card-2 {
+    grid-area: 2 / 3 / 4 / 7;
+  }
+  article.service-card-3 {
+    grid-area: 4 / 3 / 6 / 5;
+  }
+  article.service-card-4 {
+    grid-area: 4 / 5 / 8 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article.service-card-5 {
+    grid-area: 6 / 1 / 8 / 5;
+  }
+  p.service-card__note {
+    font-size: 0.8rem;
+    margin-top: 4rem;
+  }
+
+  /* Modification de la section hero */
+  section.heroes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin: 0 6rem;
+  }
+  h3.heroes__title {
+    grid-area: 1 / 1 / 2 / 7;
+  }
+  article.hero-card-1 {
+    grid-area: 2 / 1 / 5 / 3;
+    height: 50vh;
+  }
+  article.hero-card-2 {
+    grid-area: 2 / 3 / 5 / 5;
+    height: 50vh;
+  }
+  article.hero-card-3 {
+    grid-area: 2 / 5 / 5 / 7;
+    height: 50vh;
+  }
+  article.hero-card-4 {
+    grid-area: 5 / 1 / 8 / 3;
+    height: 50vh;
+  }
+  article.hero-card-5 {
+    grid-area: 5 / 3 / 8 / 5;
+    height: 50vh;
+  }
+  article.hero-card-6 {
+    grid-area: 5 / 5 / 8 / 7;
+    height: 50vh;
+  }
+  button.heroes__button {
+    grid-area: 8 / 3 / 9 / 5;
+  }
+
+  /* Modification de la partie temoignage */
+  section.testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 0 6rem;
+  }
+  .testimonials__title {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+
+  img.testimonial-card__image {
+    border-radius: 50%;
+    height: 35vh;
+    max-width: 80%;
+  }
+  article.testimonial-card-1 {
+    grid-area: 2 / 1 / 7 / 2;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article.testimonial-card-2 {
+    grid-area: 2 / 2 / 7 / 3;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article.testimonial-card-3 {
+    grid-area: 2 / 3 / 7 / 4;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article.testimonial-card-4 {
+    grid-area: 2 / 4 / 7 / 5;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.contact {
+    max-width: 40%;
+  }
+  ul.footer__nav-list {
+    flex-direction: row;
+    gap: 3rem;
+    margin: 2rem auto;
+  }
 }

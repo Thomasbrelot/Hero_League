@@ -20,23 +20,31 @@
 
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item">Services</li>
-                <li class="header__nav-item">Nos Héros</li>
-                <li class="header__nav-item">Témoignages</li>
-                <li class="header__nav-item">Sauvez-moi !</li>
+                <li class="header__nav-item">
+                    <a href="#service" class="header__nav-link--services">Services</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#hero" class="header__nav-link--heroes">Nos Héros</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#temoignage" class="header__nav-link--testimonials">Témoignages</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#contact" class="header__nav-link--cta">Sauvez-moi !</a>
+                </li>
             </ul>
         </nav>
     </header>
+
 
     <section class="hero">
         <h2 class="hero__title">Heros League</h2>
         <span class="hero__subtitle">Des gens un peu spéciaux, pour des problèmes pas tout à fait normaux</span>
     </section>
 
-    <section class="services">
+    <section class="services" id="service">
         <h3 class="services__title">Nos <strong class="color">supers</strong> Services</h3>
-
-        <article class="service-card">
+        <article class="service-card-1">
             <h4 class="service-card__title">Super Déménagement</h4>
             <span class="service-card__description">Pour des déménagements sans effort et sans casse* !</span>
             <button class="service-card__button" type="button">À partir de 233 €</button>
@@ -45,7 +53,7 @@
                 épique entre super-vilains lors du trajet.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card-2">
             <h4 class="service-card__title">Livraison de Repas</h4>
             <span class="service-card__description">Pour des livraisons super-soniques*</span>
             <button class="service-card__button">À partir de 12 €</button>
@@ -54,7 +62,7 @@
                 force. Vous pouvez souscrire à notre assurance Porte en vrac pour 5 € de plus.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card-3">
             <h4 class="service-card__title">Z'héro Bouchons</h4>
             <span class="service-card__description">Pour les clients pressés !*</span>
             <button class="service-card__button">1,33 €/km</button>
@@ -64,7 +72,7 @@
             </p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card-4">
             <h4 class="service-card__title">Sauvetage de soirée</h4>
             <span class="service-card__description">Pour les soirées booooring !</span>
             <button class="service-card__button">À partir de 50 €/h</button>
@@ -73,7 +81,7 @@
                 sauvable sauvable.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card-5">
             <h4 class="service-card__title">Moral à Z'héro</h4>
             <span class="service-card__description">Pour les jours gris et les cœurs lourds...</span>
             <button class="service-card__button">À partir de 100 €</button>
@@ -83,7 +91,7 @@
         </article>
     </section>
 
-    <section class="heroes">
+    <section class="heroes" id="hero">
         <h3 class="heroes__title">Nos <strong class="color">Supers</strong> Héros</h3>
 
         <article class="hero-card-1">
@@ -136,10 +144,10 @@
         <button class="heroes__button" type="button">Tous nos héros</button>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="temoignage">
         <h3 class="testimonials__title">Les Témoignages de nos clients</h3>
 
-        <article class="testimonial-card">
+        <article class="testimonial-card-1">
             <img class="testimonial-card__image" src="./ressources/images/testimony-1.png" alt="">
             <div class="text-avis-client">
                 <h5 class="testimonial-card__name">Tombédeu O.</h5>
@@ -149,7 +157,7 @@
             </div>
         </article>
 
-        <article class="testimonial-card">
+        <article class="testimonial-card-2">
             <img class="testimonial-card__image" src="./ressources/images/testimony-2.png" alt="">
             <div class="text-avis-client">
                 <h5 class="testimonial-card__name">Jella N.</h5>
@@ -159,7 +167,7 @@
             </div>
         </article>
 
-        <article class="testimonial-card">
+        <article class="testimonial-card-3">
             <img class="testimonial-card__image" src="./ressources/images/testimony-3.png" alt="">
             <div class="text-avis-client">
                 <h5 class="testimonial-card__name">Bob O.</h5>
@@ -169,7 +177,7 @@
             </div>
         </article>
 
-        <article class="testimonial-card">
+        <article class="testimonial-card-4">
             <img class="testimonial-card__image" src="./ressources/images/testimony-4.png" alt="">
             <div class="text-avis-client">
                 <h5 class="testimonial-card__name">Coupéhala H.</h5>
@@ -180,7 +188,7 @@
         </article>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <h3 class="contact__title">Sauvez-moi !</h3>
 
         <form class="contact__form" action="submit.php" method="POST">
@@ -200,7 +208,7 @@
             </select>
 
             <label class="contact__label" for="message">Message </label>
-            <textarea class="contact__textarea" id="message" name="message" rows="12" required></textarea>
+            <textarea class="contact__textarea" id="message" name="message" rows="20" required></textarea>
 
             <button class="contact__button" type="submit">Envoyer</button>
         </form>
