@@ -1,63 +1,62 @@
-# Heros League a besoin de toi !
+## 🦸 Hero League - Site Web Responsive
 
-**Heros League&trade;** est une société de mise à disposition de **super-héros** pour des situations d'urgence en tout genre. Nous avons besoin de toi pour créer un site web qui permettra de présenter nos différents services et de pouvoir lancer un appel à l'aide.
+**Hero League** est un site web conçu en HTML et CSS, développé en Mobile-First pour assurer une navigation fluide sur tous les écrans (mobile, tablette, desktop).
 
-Pour l'instant ce n'est qu'**une page d'accueil**, mais on te recontactera rapidement pour **ajouter de nouvelles fonctionnalités.**
+![Graphique du trafic internet en février 2025](./ressources/images/trafic-internet_Fevrier2025.png)
 
-**Prêt à servir la League ?** :muscle: :rocket:
+### 🚀 Fonctionnalités
 
-Tu trouveras dans les **ressources** tout ce dont tu as besoin pour réaliser ce projet.
+Design responsive avec Media Queries.
 
-## Consignes
+Présentation des héros, services et témoignages.
 
-- La police d'écriture est celle-ci : [Satoshi](https://www.fontshare.com/?q=Satoshi)
-  - Le designer nous a dit qu'il y avait pas mal de graisses différentes à prendre
-- Pour les couleurs, on ne les a plus sous la main, mais on imagine que tu trouveras un moyen de les récupérer :wink:
-- N'hésite pas à prendre la maquette de la home et la glisser / déposer dans ton navigateur pour la voir comme si c'était le site web (appuie sur la maquette dans le navigateur pour la zoomer à la largeur de l'écran)
-- Les liens du menus doivent être des ancres qui pointent vers la section correspondante
-- La première section avec la grande image doit prendre tout l'espace disponible dans la hauteur de l'écran (et ne pas dépasser !)
-- Au survol d'un héro, un texte supplémentaire doit apparaître par dessus l'image (voir maquette). Petit détail, le texte doit apparaître par le haut de l'image
-- Il y a un bouton pour voir plus de héros mais pour le moment il n'y a pas de page de prévue par le designer, donc renseigne "#" en lien, on verra plus tard !
-- Sinon tu es libre de faire comme tu veux, tant que ça ressemble à la maquette ! :smile:
+Navigation fluide et optimisée.
 
-## Maquette globale
+Bouton d’urgence pour contacter un héros.
 
-![Home](./ressources/home.png)
+#### <u>📱 Développement Mobile-First</u>
 
-### Header
+Le site a d'abord été conçu pour mobile, puis adapté aux écrans plus grands avec des Media Queries.
 
-Le menu doit passer par dessus le contenu au scroll.
+#### <u>📂 Structure du Projet</u>
 
-![Header](./ressources/header.png)
+index.html : Page principale
 
-## Hovers
+styles/ : Fichiers CSS organisés (reset.css , style.css)
 
-### Menu
+assets/ : Images et polices
 
-![Menu](./ressources/menu-hover.png)
+#### <u>⚙️ Technologies Utilisées</u>
 
-### Héros
+1- HTML5 📄
 
-![Héros](./ressources/hover-hero.png)
+2- CSS3 🎨 (Flexbox, Grid, animations)
 
-### Bouton
+📌 Améliorations Futures
+Ajout de JavaScript pour plus d’interactivité
 
-![Bouton](./ressources/button-hover.png)
+### 🌍 Démo en Ligne
 
-### Footer menu 
+🔗 [Heros League](https://ton-github.github.io/hero-league/)
 
-![Footer menu](./ressources/footer-menu-hover.png)
+### 🎯 Objectifs du Projet
 
-## Input Focus Outline
+✅ Appliquer la méthodologie **Mobile-First**  
+✅ Utiliser **Flexbox & Grid** pour le responsive  
+✅ Concevoir une **navigation intuitive et fluide**  
+✅ Expérimenter avec **les animations CSS**
 
-![Input Focus Outline](./ressources/input-focus.png)
+### 🏆 Challenges & Solutions
 
-## Responsive
+- **Problème** : Commencement du site en mobile first.  
+  <u>**Solution**</u> : decomposer la maquette fournie et reflechir a la semantique html et les balises à utilisé.
+- **Problème** : Ajuster les images en responsive sans distorsion  
+  <u>**Solution**</u> : Utilisation de `object-fit: cover;` et `max-width: 100%;` <br>
+- **Problème** : Optimisation des performances du CSS  
+  <u>**Solution**</u> : Minification des fichiers CSS et chargement asynchrone des assets
 
-### Tablette
+### 📞 Contact
 
-![Tablette](./ressources/home-tablet.png)
+💌 Retrouve-moi sur LinkedIn ou GitHub !
 
-### Mobile
-
-![Mobile](./ressources/home-phone.png)
+⭐ Stp, laisse une étoile si tu aimes le projet ! 🚀
